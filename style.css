@@ -59,8 +59,8 @@ body {
     display: none;
     position: absolute;
     background-color: #000000;
-    bottom: 10px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
     width: 250px;
     min-height: 250px;
     padding: 10px;
@@ -72,14 +72,17 @@ body {
     0% {
         opacity: 0%;
         right: 50%;
+        bottom: 50%;
+        transform: rotate(-400deg);
     }
 
-    10% {
-        transform: rotate(400deg);
+    95% {
+        transform: rotate(0deg);
     }
 
     100% {
-        right: 5%;
+        right: 30px;
+        bottom: 30px;
     }
 }
 
