@@ -79,6 +79,7 @@ body {
     95% {
         transform: rotate(0deg);
     }
+ 
 
     100% {
         right: 30px;
@@ -119,5 +120,39 @@ body {
     100%{
         opacity: 0%;
         transform: translateX(120%);
+    }
+}
+
+@media(max-width: 930px){
+    #app {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        bottom: unset;
+        right: unset;
+        width: 98%;
+        position: unset;
+        animation: unset;
+        border-radius: 10px;
+        margin: 10px 0;
+    }
+}
+
+@media(max-width: 670px){
+    #app {
+        width: 95%;
+    }
+}
+
+@media(max-width: 365px){
+    #app {
+        width: 98%;
+    }
+
+    #app h1 {
+        font-size: 50px;
     }
 }
