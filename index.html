@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Meu segundo app</title>
+</head>
+<body>
+    <div class="container-md">
+        <div id="app">
+            <form class="row g-3">
+                <h1>Cadastro</h1>
+                <div class="col-md-12">
+                    <label for="inputNome" class="form-label">Nome:</label>
+                    <input type="text" class="form-control" id="inputNome" v-model="input_nome">
+                </div>
+
+                <div class="col-md-12">
+                    <label for="inputCPF" class="form-label">CPF:</label>
+                    <input type="text" class="form-control" id="inputCPF" v-model="input_cpf">
+                </div>
+
+                <div class="col-md-12">
+                    <label for="inputEmail" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="inputEmail" v-model="input_email">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputEnd" class="form-label">Endereço:</label>
+                    <input type="text" class="form-control" id="inputEnd" v-model="input_endereco">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputN" class="form-label">Nº:</label>
+                    <input type="number" class="form-control" id="inputN" v-model="input_n">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputBairro" class="form-label">Bairro:</label>
+                    <input type="text" class="form-control" id="inputBairro" v-model="input_bairro">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputCid" class="form-label">Cidade:</label>
+                    <input type="text" class="form-control" id="inputCid" v-model="input_cidade">
+                </div>
+
+                <div class="form-floating textArea">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" v-model="input_mensagem"></textarea>
+                    <label for="floatingTextarea">Comentarios</label>
+                </div>
+
+                <input type="submit" class="btn btn-success" v-on:click="EnviarForm">
+            </form>
+            <div class="card">
+                <p>Nome: {{ nome }}</p>
+                <p>CPF: {{ cpf }}</p>
+                <p>E-mail: {{ email }}</p>
+                <p>Endereço: {{ endereco }}</p>
+                <p>nº: {{ n }}</p>
+                <p>Bairro: {{ bairro }}</p>
+                <p>Cidade: {{ cidade }}</p>
+                <p>Comentarios: {{ mensagem }}</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #A9A9A9;
+}
+
+.container-md {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#app {
+    display: flex;
+    margin: 40px 0;
+    background-color: #363636;
+    box-shadow: 10px 10px 30px #1C1C1C;
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#app > * {
+    color: #FFF;
+}
+
+#app label {
+    margin-left: 5px;
+}
+
+.textArea {
+    color: #000;
+}
+
+.textArea > textarea {
+    resize: none;
+}
+
+#app > form { 
+    margin: 15px 0;
+    font-family: 'Varela Round', sans-serif;
+}
+
+#app h1 {
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Irish Grover', cursive;
+}
+
+.card {
+    font-family: 'Varela Round', sans-serif;
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    bottom: 10px;
+    right: 20px;
+    width: 250px;
+    min-height: 250px;
+    padding: 10px;
+    color: #FFF;
+    animation: animacaoCard 1s ease-in-out;
+}
+
+@keyframes animacaoCard {
+    0% {
+        opacity: 0%;
+        right: 50%;
+    }
+
+    10% {
+        transform: rotate(400deg);
+    }
+
+    100% {
+        right: 5%;
+    }
+}
+
+.mostErro {
+    background-color: red;
+    position: fixed;
+    bottom: 15px;
+    left: 10px;
+    padding: 5px 8px;
+    animation: erro1 0.5s ease-in-out;
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+@keyframes erro1 {
+    0% {
+        bottom: -100px;
+    }
+
+    100%{
+        bottom: 15px;
+    }
+}
