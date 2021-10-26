@@ -46,12 +46,18 @@ function showCard(){
 }
 
 function erro1() {
+    if(document.body.querySelector('.mostErro')){
+        document.body.removeChild(document.body.querySelector('.mostErro'))
+    }
+
     let elemento = document.createElement("div")
     elemento.classList.add('mostErro')
     elemento.innerHTML = "Preencha todos os campos!"
     document.body.appendChild(elemento)    
-    setInterval(excluir, 4000)
+    var interExcluir = setInterval(excluir, 4000)
     function excluir() {
         document.body.removeChild(elemento)
+        console.log(elemento)
+        clearInterval(interExcluir)
     }
 }
